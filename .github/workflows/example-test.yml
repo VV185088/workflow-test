@@ -16,7 +16,7 @@ jobs:
         with:
           fetch-depth: 0
       - name: Get sum
-         # uses: ./.github/actions/test-go-execution
+        uses: ./.github/actions/test-go-execution
         id: getsum
         with:
           x: "3" 
