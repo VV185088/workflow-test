@@ -6,5 +6,5 @@ COPY src/get_sum_of_two_values.go /get_sum_of_two_values.go
 # install dependencies
 RUN go get github.com/go-yaml/yaml
 # build & run golang script to push data to Service Now
-RUN go build -o /get_sum_of_two_values /get_sum_of_two_values.go
+RUN go build -o /get_sum_of_two_values /get_sum_of_two_values
 # ENTRYPOINT [ "/entrypoint.sh" ]
