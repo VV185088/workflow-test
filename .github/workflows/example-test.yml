@@ -4,16 +4,16 @@ on: [push]
 jobs:
   build:
     # Job name is Greeting
-    name: Greeting
+    name: Basic Tests
     # This job runs on Linux
     runs-on: ubuntu-latest
     steps:
-      # This step uses GitHub's hello-world-javascript-action: https://github.com/actions/hello-world-javascript-action
-      - name: Hello world
-        uses: actions/hello-world-javascript-action@v1
-        with:
-          who-to-greet: 'Vignesh V'
-        id: hello
       # This step prints an output (time) from the previous step's action.
       - name: Echo the greeting's time
         run: echo 'The time was ${{ steps.hello.outputs.time }}.'
+      - name: Get sum
+        uses: ./.github/actions/push-to-service-now
+        id: getsum
+        with:
+          x: 3 
+          y: 5

@@ -1,0 +1,15 @@
+name: 'Sample Go Example'
+description: 'Runs a sample go code that returns sum'
+runs:
+    using: 'docker'
+    image: 'Dockerfile'
+    args:
+        - ${{inputs.x}}
+        - ${{inputs.y}}
+inputs:
+    x:
+        required: true
+        description: 'Value x'
+    y:
+        required: false
+        description: 'Value y'
