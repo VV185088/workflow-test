@@ -2,6 +2,10 @@ package main
 import (
 	"fmt"
 	"os"
+	"github.com/go-yaml/yaml"
+	"io/ioutil"
+
+
 )
 func main(){
 	fmt.Println("Welcome")
