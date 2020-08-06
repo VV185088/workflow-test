@@ -11,5 +11,5 @@ inputs:
         required: true
         description: 'Value x'
     y:
-        required: false
+        required: true
         description: 'Value y'
